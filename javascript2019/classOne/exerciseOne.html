@@ -15,6 +15,9 @@
         h1 {
             color: indigo;
         }
+        h2 {
+            color: honeydew;
+        }
     </style>
 </head>
 <body>
@@ -23,9 +26,16 @@
     <p>Nemo is your name!</p>
 
     <script>
-        window.alert('Xurumelas')
-        confirm('Are you liked?')
-        prompt('Eai jovem sussa?')
+        //window.alert('Xurumelas')
+        //confirm('Are you liked?')
+        var name = prompt('what is your name? ') //String
+        document.write(`<h2>Your name  is ${name.toUpperCase()} and have ${name.length} letters!</h2>`)
+
+        var n1 = Number.parseInt(window.prompt('digit a number!'))
+        var n2 = Number(prompt('digit another number!!'))
+        var sum = n1 + n2
+        alert('convert to string ' + String(sum))
+        alert(`This sum between ${n1} + ${n2} = ${sum}`)
     </script>
 </body>
 </html>
