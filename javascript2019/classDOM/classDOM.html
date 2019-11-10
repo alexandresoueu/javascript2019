@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Julinho</title>
+    <style>
+        body {
+            background: lightslategray;
+            color: black;
+            font: normal 18pt Tahoma;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="agaum">DOMinou a pelota</h1>
+    <p id="papa">Here go to result!</p>
+    <p>Learning to use <strong>DOM</strong> in JavaScript</p>
+    <div id="divaum">Click here!</div>
+    
+    <script>
+        var body = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var divaum = window.document.getElementById('divaum')
+
+        body.style.background = 'purple'
+       
+        window.document.write('INNER TEXT ' + p1.innerText + '<br>')
+        window.document.write('INNER HTML ' + p1.innerHTML)
+       
+        divaum.style.background = 'brown'
+        divaum.innerText = '<strong>CHANGED <strong/> the text...'
+
+        var agaum = window.document.querySelector('h1.agaum')
+        agaum.style.color = 'pink'
+
+        var papa = window.document.querySelector('p#papa')
+        papa.style.background = 'yellow'
+    </script>
+</body>
+</html>
