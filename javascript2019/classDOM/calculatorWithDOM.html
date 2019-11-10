@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filipinho</title>
+    <style>
+        body {
+            font: normal 18pt tahoma;
+        }
+        input {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Values</h1>
+    <input type="number" name="field1" id="field1"> +
+    <input type="number" name="field2" id="field2">
+    <input type="button" value="sum" onclick="sum()">
+
+    <div id="result">
+        Result: 
+    </div>
+    <script>
+        function sum() {
+            var valueOne = document.getElementById('field1')
+            var valueTwo = document.querySelector('input#field2')
+            var result = document.getElementById('result')
+
+            var n1 = Number(valueOne.value)
+            var n2 = Number(valueTwo.value)
+            
+            var res = n1 + n2
+
+            result.innerHTML = `The result between ${n1} and ${n2} is <strong>${res}</strong>`
+        }
+    </script>
+</body>
+</html>

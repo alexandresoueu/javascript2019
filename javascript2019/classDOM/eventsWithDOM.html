@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Renanzinho</title>
+    <style>
+        div#hash {
+            background: rgb(240, 218, 154);
+            color: sienna;
+            font: normal 18pt tahoma;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        div#kotlin {
+            background: chocolate;
+            color: white;
+            font: normal 18pt tahoma;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="hash" onclick="clique()" onmouseenter= "taDentro()" onmouseout="taFora()">Interact .....</div>
+
+    <div id="kotlin"></div>
+
+    <script>
+        function clique() {
+            var hashinho = window.document.getElementById('hash')
+            hashinho.innerText = 'Cóe rapeize!!!'
+        }
+
+        function taDentro() {
+            var hashinho = window.document.getElementById('hash')
+            hashinho.style.background = 'lightblue'
+        }
+
+        function taFora() {
+            var hashinho = window.document.getElementById('hash')
+            hashinho.style.background = 'lightpink'
+        }
+
+        
+        var kotlin = document.getElementById('kotlin')
+            kotlin.addEventListener('click', click)
+            kotlin.addEventListener('mouseenter', enter)
+            kotlin.addEventListener('mouseout', out)
+
+        function click() {
+            let kotlin = document.getElementById('kotlin')
+            kotlin.style.background = 'lightgreen'
+            kotlin.innerText = 'CLICK CLICK CLICK....'
+        }
+
+        function enter() {
+            let kotlin = document.getElementById('kotlin')
+            kotlin.style.background = 'purple'
+            kotlin.innerText = 'ENTERRRRRRR....'
+        }
+
+        function out() {
+            let kotlin = document.getElementById('kotlin')
+            kotlin.style.background = 'red'
+            kotlin.innerText = 'OUTTTTTTT ....'
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
