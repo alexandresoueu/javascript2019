@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jaimino</title>
+</head>
+
+<body>
+    Qual a sua nacionalidade: <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="verify" onclick="nacional()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function nacional() {
+            var nacionalidade = document.querySelector('input#txtnac')
+            var country = String(nacionalidade.value)
+
+            var res = document.querySelector('div#res')
+
+            res.innerHTML = `<p> Vocé é do país: ${country}</p>`
+
+            if (country == 'brasil') res.innerHTML += `VAIIIIIIIIIII CORINTCHA`
+
+            res.innerHTML += `<p>Welcom to BRASIL....</p>`
+        }
+
+    </script>
+</body>
+
+</html>
