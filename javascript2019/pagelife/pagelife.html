@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>This is a Life</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Verify your age...</h1>
+    </header>
+    <section>
+        <div>
+            <p>Born: 
+                <input type="number" name="txtyear" id="txtyear" min="0">
+            </p>
+            <p>Sex:
+                <input type="radio" name="radsex" id="mal" checked>
+                <label for="mal">Male</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Female</label>
+            </p>
+            <p>
+                <input type="button" value="verify" onclick="check()">
+            </p>
+
+        </div>
+        <div id="res">
+            Check your age after to fill the form above...
+        </div>
+    </section>
+    <footer>
+        &copy; Zika da Balada
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
