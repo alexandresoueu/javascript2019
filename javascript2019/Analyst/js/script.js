@@ -56,6 +56,6 @@ function end() {
         res.innerHTML += `<p>The bigger number is ${bigger} </p>`
         res.innerHTML += `<p>The smaller number is ${smaller} </p>`
         res.innerHTML += `<p>The sum of numbers is ${sum} </p>`
-        res.innerHTML += `<p>The media of numbers is ${media} </p>`
+        res.innerHTML += `<p>The media of numbers is ${media } </p>`
     }
 }

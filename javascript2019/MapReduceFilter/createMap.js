@@ -16,17 +16,17 @@ const cart = [
 
 console.log(cart)
 
-let toObj = json => JSON.parse(json)
+let convertToObj = json => JSON.parse(json)
 let onlyPrice = product => product.price
 
-let result = cart.mymap(toObj).mymap(onlyPrice)
+let result = cart.mymap(convertToObj).mymap(onlyPrice)
 console.log(result)
 
 
-let real = result.mymap(function(cb) {
-    return cb
+let money = result.mymap(function(callback) {
+    return callback
 })
-let money = cb => `R$ ${parseFloat(cb).toFixed(2).replace('.', ',')}`
+let real = callback => `R$ ${parseFloat(callback).toFixed(2).replace('.', ',')}`
 
-result2 = result.mymap(money) 
-console.log(result2)
+showReal = result.mymap(real) 
+console.log(showReal)

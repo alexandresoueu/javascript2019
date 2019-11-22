@@ -8,17 +8,17 @@ const cart = [
 
 console.log(cart)
 
-let toObj = json => JSON.parse(json)
+let convertToObj = json => JSON.parse(json)
 let onlyPrice = product => product.price
 
-let result = cart.map(toObj).map(onlyPrice)
+let result = cart.map(convertToObj).map(onlyPrice)
 console.log(result)
 
 
-let real = result.map(function(callback) {
+let money = result.map(function(callback) {
     return callback
 })
-let money = callback => `R$ ${parseFloat(callback).toFixed(2).replace('.', ',')}`
+let real = callback => `R$ ${parseFloat(callback).toFixed(2).replace('.', ',')}`
 
-result2 = result.map(money) 
-console.log(result2)
+showReal = result.map(real) 
+console.log(showReal)
