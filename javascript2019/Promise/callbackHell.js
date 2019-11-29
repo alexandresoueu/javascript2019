@@ -12,7 +12,6 @@ const getClass = (letter, callback) => {
 
         res.on('end', () => {
             callback(JSON.parse(result))
-            console.log(result)
         })
     })
 } 
@@ -20,13 +19,11 @@ const getClass = (letter, callback) => {
 let names = []
 
 getClass('A', students => {
-    names => names.concat(students.map(children => `A: ${children.nome}`))
-    console.log(names)
+    names = names.concat(students.map(children => `A: ${children.nome}`))
      getClass('B', students => {
-         names => names.concat(students.map(children => `B: ${children.nome}`))
-         console.log(names)
+         names = names.concat(students.map(children => `B: ${children.nome}`))
          getClass('C', students => {
-             names => names.concat(students.map(children => `C: ${children.nome}`))
+             names = names.concat(students.map(children => `C: ${children.nome}`))
              console.log(names)
          })
      })
