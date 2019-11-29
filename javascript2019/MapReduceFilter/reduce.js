@@ -13,3 +13,10 @@ const result = students.map(children => children.note).reduce(function(acumulate
 }, 0)
 
 console.log('======> R: ', result)
+
+
+const nemo = [0, 1, 2, 3, 4].reduce(function(acc, atu, ind, arr) {
+    return acc + atu
+})
+
+console.log("Nemo: ", nemo)

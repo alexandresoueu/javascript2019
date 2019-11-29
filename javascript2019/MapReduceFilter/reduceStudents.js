@@ -7,8 +7,8 @@ const students =  [
 
 const allScholarship = (result, scholarship) => result && scholarship
 
-console.log(students.map(children => children.scholarship).reduce(allScholarship))
+console.log('Unoooo =>>>', students.map(children => children.scholarship).reduce(allScholarship))
 
 const anyScholarship = (result, scholarship) => result || scholarship
 
-console.log(students.map(children => children.scholarship).reduce(anyScholarship))
+console.log('Twooo =>>>', students.map(children => children.scholarship).reduce(anyScholarship))
