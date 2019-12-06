@@ -59,23 +59,30 @@ const responseLegado = {
     ]
 }
 
-const result = responseLegado.content.reduce(function(cb) {
-    return cb
-})
-
-const shoes = result.info.shoes.map(function(cb) {
+const getShoesRafa = responseLegado.content[0].info.shoes.map(function(cb) {
     return cb.color
 })
 
-const shoesColor = shoes.toString()
+const shoesRafa = getShoesRafa.toString()
 
 const getRafaSurname = responseLegado.content[0].info.cars
 
 const rafaSurname  = getRafaSurname.map(carrinho => Object.keys(carrinho)).reduce((accumulator, current) => accumulator + ' ' + current)
 
-const rafaFullName = result.info.user.name + ' ' + rafaSurname.replace(/nsu/g, '')
+const rafaFullName = responseLegado.content[0].info.user.name + ' ' + rafaSurname.replace(/nsu/g, '')
+
+const getShoesAle = responseLegado.content[1].info.shoes.map(function(cb) {
+    return cb.color
+})
+
+const shoesAle = getShoesAle.toString()
+
+const getAleSurname = responseLegado.content[1].info.cars
+const aleSurname  = getAleSurname.map(carrinho => Object.keys(carrinho)).reduce((accumulator, current) => accumulator + ' ' + current)
+const aleFullName = responseLegado.content[1].info.user.name + ' ' + aleSurname.replace(/nsu/g, '')
 
 const obj = {
-    [rafaFullName] : shoesColor
+    [rafaFullName] : shoesRafa,
+    [aleFullName] : shoesAle
 }
 console.log(obj)
