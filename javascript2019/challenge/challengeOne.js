@@ -63,13 +63,19 @@ const result = responseLegado.content.reduce(function(cb) {
     return cb
 })
 
-const shoes = result.info.shoes.reduce(function(cb) {
-    return cb
+const shoes = result.info.shoes.map(function(cb) {
+    return cb.color
 })
 
-const cars = result.info.cars.map(car => car)
+const shoesColor = shoes.toString()
 
+const getRafaSurname = responseLegado.content[0].info.cars
 
-const users = result.info.user
+const rafaSurname  = getRafaSurname.map(carrinho => Object.keys(carrinho)).reduce((accumulator, current) => accumulator + ' ' + current)
 
-console.log(users)
+const rafaFullName = result.info.user.name + ' ' + rafaSurname.replace(/nsu/g, '')
+
+const obj = {
+    [rafaFullName] : shoesColor
+}
+console.log(obj)
